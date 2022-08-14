@@ -78,8 +78,6 @@
             </div>
         </div>
     </header>
-   {{-- @yield('regPaymentModal') --}}
-
     {{-- @include('sweetalert:alert') --}}
     @yield('authenticated-form')
     <div class="content">

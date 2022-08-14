@@ -14,13 +14,6 @@ use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
-    // public function viewHomeLanguage($locale='en'){
-    //     App::setLocale($locale);
-    //     $user = User::where('visibility', true)->get();
-    //     $userfield = UserField::all();
-    //     return view('home', ['users' => $user, 'userfields' => $userfield]);
-    // }
-
     public function viewHome($locale='en'){
         App::setLocale($locale);
         $user = User::where('visibility', true)->get();
@@ -40,10 +33,8 @@ class PageController extends Controller
         return view('gender', ['users' => $user, 'userfields' => $userfield]);
     }
 
-    //betulin dlu -> harus berdasar user dengan field of work
     public function searchPeople(Request $request){
         $fow = FieldOfWork::where('field_name', 'LIKE', "%$request->keyword%")->get();
-        // dd($fow);
         $userfield = UserField::all();
         $users = User::all();
         $userfields = array();
@@ -68,16 +59,8 @@ class PageController extends Controller
                 }
             }
         }
-
-        // $items = Item::where('item_name', 'LIKE', "%$req->keyword%")->paginate(12);
         return view('search-result', ["users" => $userArray, 'userfields' => $userfield]);
     }
-
-    // public function viewDetailsRequest($id){
-    //     $user = User::where('id', $id)->first();
-    //     $wish =  Wishlist::where('user_id', $id)->where('friend_id', Auth::user()->id)->first();
-    //     return view('friend-detail', ['user' => $user, 'wish' => $wish]);
-    // }
 
     public function viewProfile($id, $locale='en'){
         App::setLocale($locale);
@@ -109,7 +92,6 @@ class PageController extends Controller
         return view('avatar', ['avatars' => $avatar]);
     }
 
-    //betulin
     public function viewPurchasedAvatar($locale = 'en'){
         App::setLocale($locale);
         $purchasedAvatar = PurchaseAvatar::where('user_id', Auth::user()->id)->get();
@@ -171,7 +153,6 @@ class PageController extends Controller
                 $responses[$x] = $rq->response;
            }
         }
-        // dd($friends);
         return view('friend-request', ["friends" => $users, "responses" => $responses]);
     }
 

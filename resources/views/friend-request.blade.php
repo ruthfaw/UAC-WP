@@ -31,7 +31,6 @@
         
         @for ($i = 0; $i < count($friends); $i++)
             <a href="/details/{{$friends[$i]->id}}-2-en" class="card w-100 shadow bg-white rounded" style="text-decoration:none;color:#1c3879;">
-                {{-- <div class="card w-100 shadow bg-white rounded"> --}}
                     <div class="row g-0 m-4">
                         <div class="col">
                             <img src="/profileImage/{{$friends[$i]->image}}" class="img-fluid rounded-start" alt="GAMBAR FASHION" height="100" width="150">
@@ -53,7 +52,6 @@
                                             @lang('wishlist.bar.rq_reject')
                                         @endif
                                     </div>
-                                    {{-- $cartDetail->item->itemImages->first()->item_image --}}
                                 </div>
                             </div>
                         </div>
@@ -70,19 +68,9 @@
                                         </div>
                                     </form>
                                 </div>
-                                {{-- <div class="col d-inline">
-                                    <form action="/delete" method="post">
-                                        @csrf
-                                        <input type="hidden" name="avatar_id" value="{{$avatar->id}}">
-                                        <div class="button" style="margin-top:10px;">
-                                            <button type="submit" class="btn btn-danger" style="height: 35px; width: 80px">SENT</button>
-                                        </div>
-                                    </form>
-                                </div> --}}
                             </div>
                         </div>
                     </div>
-                {{-- </div> --}}
             </a>
         @endfor
     </div>

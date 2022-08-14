@@ -32,7 +32,6 @@ class TransactionController extends Controller
         $pAvatar->save();
 
         $wallet -= $avatarPrice;
-        // dd($wallet);
         $walletOwner->wallet = $wallet;
         $walletOwner->save();
 
@@ -61,7 +60,6 @@ class TransactionController extends Controller
         $pAvatar->save();
 
         $wallet -= $avatarPrice;
-        // dd($wallet);
         $walletOwner->wallet = $wallet;
         $walletOwner->save();
 

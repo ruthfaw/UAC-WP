@@ -47,13 +47,13 @@
                 <div class="form-outline form-white mb-4">
                     <label class="form-label" for="password">@lang('regis.inputTitle.password')</label>
                     <input type="password" name="password" id="password" class="form-control form px-5-control-lg" required style="background-color: #F9F5EB">
+                    
+                    @error('password')
+                    <div class="text-danger">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
-
-                @error('password')
-                <div class="text-danger">
-                    {{ $message }}
-                </div>
-                @enderror
 
                 <div class="form-outline form-white mb-4">
                     <label class="form-label" for="gender">@lang('regis.inputTitle.gender')</label>
@@ -67,24 +67,23 @@
                             <label class="form-check-label" for="female">@lang('regis.inputContent.female')</label>
                         </div>
                     </div>
+                    @error('gender')
+                        <div class="text-danger">
+                        {{ $message }}
+                        </div>
+                    @enderror
                 </div>
-
-                @error('gender')
-                <div class="text-danger">
-                    {{ $message }}
-                </div>
-                @enderror
 
                 <div class="form-outline form-white mb-4">
                     <label class="form-label" for="profession">@lang('regis.inputTitle.profession')</label>
                     <input type="text" name="profession" id="profession" class="form-control form px-5-control-lg" required style="background-color: #F9F5EB">
+                    
+                    @error('profession')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
-
-                @error('profession')
-                <div class="text-danger">
-                    {{ $message }}
-                </div>
-                @enderror
 
                 <label class="form-label mb-3" for="field_of_work">@lang('regis.inputTitle.fow')</label>
                 <div class="form-outline form-white mb-4">
@@ -94,36 +93,33 @@
                             <label class="form-check-label" for="{{$fow->id}}">{{$fow->field_name}}</label>
                         </div>
                     @endforeach
+                    @error('fieldOfWork')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
 
-                @error('fieldOfWork')
-                <div class="text-danger">
-                    {{ $message }}
-                </div>
-                @enderror
-               
                 <label for="basic-url" class="form-label">@lang('regis.inputTitle.linkedIn')</label>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="linkedIn">https://www.linkedin.com/in/</span>
                     <input type="text" class="form-control" name="linkedIn" id="linkedIn" aria-describedby="basic-addon3" style="background-color: #F9F5EB">
+                    @error('linkedIn')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
-                
-                @error('linkedIn')
-                <div class="text-danger">
-                    {{ $message }}
-                </div>
-                @enderror
 
                 <div class="form-outline form-white mb-4">
                     <label class="form-label" for="mobileNumber">@lang('regis.inputTitle.mobileNumber')</label>
                     <input type="number" name="mobileNumber" id="mobileNumber" class="form-control form px-5-control-lg" required style="background-color: #F9F5EB">
+                    @error('mobileNumber')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
-
-                @error('mobileNumber')
-                <div class="text-danger">
-                    {{ $message }}
-                </div>
-                @enderror
 
                 <div class="form-group mb-4">
                     <label for="image">@lang('regis.inputTitle.userProfile')</label>

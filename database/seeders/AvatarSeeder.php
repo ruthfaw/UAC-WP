@@ -14,11 +14,6 @@ class AvatarSeeder extends Seeder
      */
     public function run()
     {
-        // UserField::insert([
-        //     [
-        //         'user_id' => 1,
-        //         'field_of_work_id' => 1
-        //     ],
         Avatar::insert([
             [
                 'image_avatar' => 'avatar1.jpg',

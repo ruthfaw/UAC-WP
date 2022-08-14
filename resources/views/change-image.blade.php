@@ -25,22 +25,16 @@
             <div class="mb-md-3" style="color: #141a47;font-weight:500; font-size: 18px;">
                 <h2 class="fw-bold mb-5 text-uppercase text-center">@lang('visibility.title')</h2>
                 <div class="d-flex flex-column justify-content-between mt-4 ">
-                    {{-- <a href="/topUp-process"> --}}
                         @if($visibility == 1)
                             <label class="form-label" for="password" style="font-size:25px;margin-bottom:30px;">@lang('visibility.true')</label>
                         @else
                             <label class="form-label" for="password" style="font-size:25px;margin-bottom:30px;">@lang('visibility.false')</label>
                         @endif
-                        
                         <a class="btn btn-prim btn-lg px-3" href="/invisible" role="button" style="margin-top:5px;color:white">@lang('visibility.invisible')</a>
                         <a class="btn btn-prim btn-lg px-3" href="/visible" role="button" style="margin-top:30px;color:white">@lang('visibility.visible')</a>
-                    {{-- </a> --}}
                 </div>
             </div>
         </div>
     </div>
 @endsection
 
-{{-- <div class="d-flex flex-column justify-content-between mt-4 ">
-    <button class="btn btn-prim btn-outline-dark btn-lg px-3" type="submit">Register</button>
-</div> --}}

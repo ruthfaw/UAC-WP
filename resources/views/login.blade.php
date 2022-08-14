@@ -36,24 +36,22 @@
                 <div class="form-outline form-white mb-4">
                     <label class="form-label" for="username" style="color:#141a47;">@lang('login.username')</label>
                     <input type="name" name="username" id="username" class="form-control form px-5-control-lg" required style="background-color: #F9F5EB">
+                    @error('username')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
-
-                @error('username')
-                <div class="text-danger">
-                    {{ $message }}
-                </div>
-                @enderror
 
                 <div class="form-outline form-white mb-4">
                     <label class="form-label" for="password" style="color:#141a47;">@lang('login.password')</label>
                     <input type="password" name="password" id="password" class="form-control form px-5-control-lg" required style="background-color: #F9F5EB">
+                    @error('password')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
-
-                @error('password')
-                <div class="text-danger">
-                    {{ $message }}
-                </div>
-                @enderror
 
                 <div class="form-outline form-white mb-4">
                     <input type="checkbox" name="remember_me" id="remember_me" class="form-check-input" style="background-color:#141a47"

@@ -40,7 +40,6 @@
 
                     <div class="col-md-3 d-flex flex-column align-items-end justify-content-center">
                         <div class="row" >
-                            {{-- style="margin-right: 35px" --}}
                             <h5 class="card-text">{{number_format($avatar->price_avatar)}} @lang('avatar.coin')</h5>
                         </div>
 
@@ -54,15 +53,6 @@
                                     </div>
                                 </form>
                             </div>
-                            {{-- <div class="col d-inline">
-                                <form action="/delete" method="post">
-                                    @csrf
-                                    <input type="hidden" name="avatar_id" value="{{$avatar->id}}">
-                                    <div class="button" style="margin-top:10px;">
-                                        <button type="submit" class="btn btn-danger" style="height: 35px; width: 80px">SENT</button>
-                                    </div>
-                                </form>
-                            </div> --}}
                         </div>
                     </div>
                 </div>

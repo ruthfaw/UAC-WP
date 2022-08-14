@@ -87,8 +87,4 @@ class RegisterController extends Controller
        
         return redirect('/home/en');
     }
-
-    // public function viewModal(){
-    //     return view('regModal');
-    // }
 }

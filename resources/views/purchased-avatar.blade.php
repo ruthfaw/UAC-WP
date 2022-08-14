@@ -24,7 +24,6 @@
 <div class="avatar" style="padding-bottom: 50px;min-height:73vh;">
     <div class="container d-flex flex-column align-items-center gap-2 mt-4" style="color: #141a47;">
         <h1>@lang('avatar.title_prc')</h1>
-        {{-- {{dd($avatars)}} --}}
         @foreach($avatars as $avatar)
             <div class="card w-100 shadow bg-white rounded">
                 <div class="row g-0 m-4">
@@ -39,30 +38,13 @@
                     </div>
 
                     <div class="col-md-3 d-flex flex-column align-items-end justify-content-center">
-                        <div class="row" >
-                            {{-- style="margin-right: 35px" --}}
+                        <div class="row" >  
                             <h5 class="card-text">{{number_format($avatar->price_avatar)}} @lang('avatar.coin')</h5>
                         </div>
 
                         <div class="row manage-btn g-1">
                             <div class="col">
-                                {{-- <form action="/purchase-avatar" method="post">
-                                    @csrf
-                                    <input type="hidden" name="avatar_id" value="{{$avatar->id}}">
-                                    <div class="button" style="margin-top:10px;">
-                                        <button type="submit" class="btn btn-danger" style="height: 35px; width: 105px">PURCHASE</button>
-                                    </div>
-                                </form> --}}
                             </div>
-                            {{-- <div class="col d-inline">
-                                <form action="/delete" method="post">
-                                    @csrf
-                                    <input type="hidden" name="avatar_id" value="{{$avatar->id}}">
-                                    <div class="button" style="margin-top:10px;">
-                                        <button type="submit" class="btn btn-danger" style="height: 35px; width: 80px">SENT</button>
-                                    </div>
-                                </form>
-                            </div> --}}
                         </div>
                     </div>
                 </div>

@@ -33,9 +33,6 @@
 
             return true;
         }
-        
-        //     var confirmOver =  confirm("Sorry you overpaid " extra + ", would you like to enter a balance?");
-        
     }
 
        

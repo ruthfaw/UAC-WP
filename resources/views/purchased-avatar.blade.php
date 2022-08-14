@@ -22,7 +22,7 @@
     <a class="btn btn-prim" href="/view-purchased-avatar/en" role="button" style="margin-top: 30px; margin-bottom: 25px; padding: 5px 80px;">English</a>
 </div>
 <div class="avatar" style="padding-bottom: 50px;min-height:73vh;">
-    <div class="container d-flex flex-column align-items-center gap-2 mt-4" style="color: #396854;">
+    <div class="container d-flex flex-column align-items-center gap-2 mt-4" style="color: #141a47;">
         <h1>@lang('avatar.title_prc')</h1>
         {{-- {{dd($avatars)}} --}}
         @foreach($avatars as $avatar)

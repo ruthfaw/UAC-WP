@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return redirect('/home/en');
+});
+
 Route::get('/register/{locale?}', [RegisterController::class, 'viewForm']);
 Route::post('/register-process', [RegisterController::class, 'register']);
 Route::get('/register-payment/{locale?}-{id}-{price}', [RegisterController::class, 'viewPayment']);

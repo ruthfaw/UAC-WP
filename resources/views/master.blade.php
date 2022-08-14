@@ -39,7 +39,7 @@
             <div class="d-flex nav-item gap-3">
                 <div class="avatar px-2 dropdown align-self-center">
                     <a href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" style="font-size:25px;text-decoration:none;color:#141a47;">
-                        <img class="detail-img" src="/iconDetails/connection.png" alt="slide" width="50px" height="55px">
+                        <img class="detail-img" src="/iconDetails/connection.png" alt="slide" width="38px" height="40px">
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/wishlist"> @lang('navbar.dropdown.wishlist')</a></li>
